@@ -1,0 +1,301 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    background-color: #640e19;
+}
+
+header {
+    width: 100vw;
+    height: 100%;
+}
+
+nav {
+    background-color: #e2cdb0;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+ul img {
+    width: 8rem;
+}
+
+ul a {
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: #640e19;
+    font-weight: 600;
+}
+
+li {
+    list-style: none;
+    font-size: 15px;
+}
+
+ul a:hover {
+    color: rgb(184, 184, 184);
+}
+
+section {
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.image_food {
+    background-color: #e2cdb0;
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.image img {
+    border-radius: 15px;
+}
+
+.food {
+    width: 20rem;
+    filter: brightness(25%);
+    transition-duration: 0.5s;
+}
+
+.image_food:hover .food {
+    filter: brightness(100%);
+}
+
+h1 {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: #640e19;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.button {
+    width: 20rem;
+    text-align: center;
+}
+
+.button p {
+    font-family: "Roboto", sans-serif;
+    color: #640e19;
+    font-weight: 600;
+    font-size: 1vw;
+}
+
+#order-button {
+    padding: 0.7rem;
+}
+
+button {
+    /* width: 6vw; */
+    padding: 12px;
+    background-color: #640e19;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(67, 67, 67);
+}
+
+.plus {
+    font-size: 25px;
+    width: 3vw;
+    height: 100%;
+    color: white;
+}
+.minus {
+    font-size: 25px;
+    width: 3vw;
+    padding-bottom: 0.5rem;
+    color: white;
+}
+
+.radio {
+    gap: 1rem;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.radio p {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    color: #640e19;
+    font-weight: 600;
+}
+
+input[type="radio"] {
+    margin-left: 2rem;
+    appearance: none; /* Sembunyikan radio bawaan */
+    width: 20px;      /* Atur ukuran lingkaran */
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%; /* Buat bentuk lingkaran */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="radio"]:checked {
+    background-color: #640e19;
+}
+
+.orderButton {
+    display: grid;
+}
+/* SECTION 2 */
+.section_2 {
+    position: absolute;
+}
+
+.sidebar {
+    background-color: #e2cdb0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 19vw;
+    height: 50vh;
+    padding: 17px 10px 10px 10px;
+    flex-direction: column;
+    display: none;
+    overflow: hidden;
+    overflow-y: scroll;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.order_confirm {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;    
+    position: fixed;
+    top: 35%;
+    left: 35%;
+    width: 30%;
+    height: 30vh;
+    padding: 1vw;
+    display: none;
+    border-radius: 10px;
+}
+
+#orderMessage1, #orderMessage2 {
+    font-size: 1.3vw;
+    font-family: "Roboto", sans-serif;
+}
+
+.order_confirm button {
+    position: absolute;
+    bottom: 5%;
+    left: 40%;
+    width: 7vw;
+    height: 3vw;
+    font-size: 1vw;
+}
+
+#outputFood {
+    text-align: center;
+    font-size: 1vw;
+    font-family: "Roboto", sans-serif;
+}
+
+.input_style {
+    width: 15vw;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.button_cancel, .button_confirm {
+    width: 8vw;
+}
+
+@media screen and (max-width: 500px) {
+    nav{
+        height: 4rem;
+        width: 110%;
+    }
+    ul {
+        /* margin-left: 1rem; */
+        gap: 1rem;
+        font-size: 10px;
+    }
+    ul img {
+        width: 5rem;
+    }
+    li {
+        font-size: 10px;
+    }
+    .wrapper .image {
+        display: flex;
+        flex-direction: column;
+    }
+    .image_food {
+        width: 23rem;
+    }
+    .image_food img {
+        width: 20rem;
+    }
+    .image_food button {
+        padding: 0;
+        margin: 0;
+        width: 20rem;
+    }
+    .image_food p {
+        font-size: 10px;
+    }
+    .label p {
+        margin-left: 0.8rem;
+    }
+}
+/* @media only screen and (min-width: 501px) {
+    nav {
+        width: 90rem;
+        margin: 0;  
+    }
+    .wrapper .image {
+        display: flex;
+        flex-direction: column;
+    }
+    .image_food {
+        width: 23rem;
+    }
+} */
